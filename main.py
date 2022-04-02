@@ -4,10 +4,14 @@ lst = OneLinkedList()
 
 
 lst.addEnd(0)
-lst.addStart(1)
-lst.addStart(2)
-lst.addStart(4)
-lst.add(5, 2)
+lst.addEnd(1)
+lst.addEnd(2)
 
-for i in range(5):
-    print(lst.getElemByIndex(i))
+
+for i in range(3):
+    print(lst.getElemByIndex(i), end=" ")
+
+lst.delete(2)
+print()
+for i in range(3):
+    print(lst.getElemByIndex(i), end= " ")
