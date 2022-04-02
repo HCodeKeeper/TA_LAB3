@@ -1,8 +1,13 @@
-from LinkedListNode import LinkedListNode
+class LinkedListNode:
+
+    def init(self, data):
+        self.data = data
+        self.next_element = None
+
 
 class MyLinkedList:
 
-    def __init__(self):
+    def init(self):
         self.head = None
         self.count = 0
 
@@ -50,13 +55,11 @@ class MyLinkedList:
         current_el.next_element = new_node
         self.count += 1
 
-
     def delete_start(self):
         if self.head is None:
             return
         self.head = self.head.next_element
         self.count -= 1
-
 
     def delete_end(self):
         if self.head is None:
@@ -90,10 +93,22 @@ class MyLinkedList:
         current_el.next_element = current_el.next_element.next_element
         self.count -= 1
 
-
     def print_list(self):
         current_el = self.head
         print(current_el.data)
         while current_el.next_element is not None:
             current_el = current_el.next_element
             print(current_el.data)
+
+    def get_element_index(self, value):
+        if self.head is None:
+            return
+
+        local_index = 0
+        current_el = self.head
+        while current_el.next_element is not None:
+            if current_el.data == value:
+                return local_index
+            current_el = current_el.next_element
+            local_index += 1
+        return -1
