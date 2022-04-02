@@ -78,5 +78,16 @@ class OneLinkedList:
         self.len -= 1
         return True
 
+    def search(self, toSearch):
+        index = 0
+        thisNode = self.zero.next
+        while thisNode is not None:
+            if thisNode.value == toSearch:
+                return index
+            else:
+                index += 1
+                thisNode = thisNode.next
+        return None
+
     def length(self):
         return self.len
