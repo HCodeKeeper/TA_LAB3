@@ -111,3 +111,5 @@ class MyLinkedList:
                 return local_index
             current_el = current_el.next_element
             local_index += 1
+        return -1
+    
