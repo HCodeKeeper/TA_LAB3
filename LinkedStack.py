@@ -10,7 +10,7 @@ class LinkedStack:
         self.elements.append(element)
 
     def pop(self):
-        elem = self.elements.head
+        elem = self.elements.head.data
         self.elements.delete_start()
         return elem
 
