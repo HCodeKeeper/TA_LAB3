@@ -1,5 +1,6 @@
 from LinkedList import MyLinkedList
 
+
 class LinkedListQueue:
 
     def __init__(self):
@@ -12,6 +13,5 @@ class LinkedListQueue:
         self.queue.delete_start()
 
     def element(self):
-
         return self.queue.head.data
 

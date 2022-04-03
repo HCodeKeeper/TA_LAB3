@@ -1,15 +1,18 @@
-from OneLinkedList import OneLinkedList
+from LinkedList import MyLinkedList
 
 
 class LinkedStack:
 
     def __init__(self):
-        self.elements = OneLinkedList()
+        self.elements = MyLinkedList()
 
     def push(self, element):
-        self.elements.addStart(element)
+        self.elements.append(element)
 
     def pop(self):
-        elem = self.elements.getElemByIndex(0)
-        self.elements.delStart()
+        elem = self.elements.head
+        self.elements.delete_start()
         return elem
+
+    def search(self, element):
+        return self.elements.get_element_index(element)

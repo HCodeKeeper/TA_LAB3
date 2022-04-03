@@ -1,13 +1,13 @@
 class LinkedListNode:
 
-    def init(self, data):
+    def __init__(self, data):
         self.data = data
         self.next_element = None
 
 
 class MyLinkedList:
 
-    def init(self):
+    def __init__(self):
         self.head = None
         self.count = 0
 
