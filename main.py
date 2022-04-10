@@ -1,17 +1,15 @@
-from OneLinkedList import OneLinkedList
 
-lst = OneLinkedList()
+from LinkedStack import LinkedStack
+
+stck = LinkedStack()
+
+stck.push(1)
+stck.push(2)
+stck.push(3)
+stck.push(4)
+
+print(stck.search(4))
+for i in range(5):
+    print(stck.pop())
 
 
-lst.addEnd(0)
-lst.addEnd(1)
-lst.addEnd(2)
-
-
-for i in range(3):
-    print(lst.getElemByIndex(i), end=" ")
-print(lst.search(1))
-lst.delete(2)
-print()
-for i in range(3):
-    print(lst.getElemByIndex(i), end= " ")
