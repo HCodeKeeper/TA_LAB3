@@ -7,7 +7,7 @@ class LinkedStack:
         self.elements = MyLinkedList()
 
     def push(self, element):
-        self.elements.append(element)
+        self.elements.prepend(element)
 
     def pop(self):
         elem = self.elements.head.data
