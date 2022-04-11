@@ -73,6 +73,9 @@ class DoublyLinkedList():
             raise ArgumentError(None, message="The list is empty")
         elif self.tail == None:
             self.head = None
+        elif self.tail.prev is self.head:
+            self.head.next = None
+            self.tail = None
         else:
             prev_node = self.tail.prev
             prev_node.next = None
